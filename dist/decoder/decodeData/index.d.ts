@@ -3,7 +3,7 @@ export interface Chunk {
     text: string;
 }
 export interface ByteChunk {
-    type: Mode.Byte | Mode.Kanji;
+    type: Mode.Byte;
     bytes: number[];
 }
 export interface ECIChunk {
@@ -20,7 +20,6 @@ export declare enum Mode {
     Numeric = "numeric",
     Alphanumeric = "alphanumeric",
     Byte = "byte",
-    Kanji = "kanji",
     ECI = "eci"
 }
 export declare function decode(data: Uint8ClampedArray, version: number): DecodedQR;
